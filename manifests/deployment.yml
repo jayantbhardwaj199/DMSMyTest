@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kimage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kimage
+  template:
+    metadata:
+      labels:
+        app: kimage 
+    spec:
+      containers:
+        - name: kimage 
+          image: mycontainerregistrynewtest1.azurecr.io/kimage
+          ports:
+          - containerPort: 8080
