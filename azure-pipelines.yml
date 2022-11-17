@@ -5,7 +5,9 @@
     action: 'deploy'
     kubernetesServiceConnection: 'ktests-ktestname'
     namespace: 'ktestname'
-    manifests: 'manifests/*'
+    manifests: |
+      manifests/deployment.yml
+      manifests/service.yml
 
 resources:
 - repo: self
