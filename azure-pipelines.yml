@@ -1,13 +1,3 @@
-# Deploy to Azure Kubernetes Service
-# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker- task: KubernetesManifest@0
-  inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'ktests-ktestname'
-    namespace: 'ktestname'
-    manifests: |
-      manifests/deployment.yml
-      manifests/service.yml
 
 resources:
 - repo: self
